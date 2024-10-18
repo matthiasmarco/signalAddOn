@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Lien Signalement et Évaluation",
+  "description": "Évaluer ou signaler un lien via un menu contextuel",
+  "version": "1.0",
+  "permissions": ["contextMenus", "storage", "activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/banane.jpeg",
+      "48": "icons/banane.jpeg",
+      "128": "icons/banane.jpeg"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/icon16.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
+

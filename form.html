@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signaler un lien</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+    .form-container {
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      width: 80%;
+      max-width: 400px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    textarea {
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .image-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .image-container img {
+      max-width: 50%; /* Réduire la taille de l'image de 50% */
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Signaler un lien frauduleux</h1>
+    <form id="report-form">
+      <label for="comment">Décrivez pourquoi ce lien est frauduleux :</label>
+      <textarea id="comment" rows="4" placeholder="Votre commentaire"></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+
+    <div class="image-container">
+      <img src="./logo.png" alt="Description de l'image">
+    </div>
+  </div>
+
+  <!-- Lien vers le fichier JS externe -->
+  <script src="form.js"></script>
+</body>
+</html>
+
